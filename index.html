@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+	<head>
+    <meta charset="utf-8" />
+
+		<title>Desafio cidades</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+  
+  </head>
+
+  <body>
+
+    <!--Cabeçalho inicio-->
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
+      <nav class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <img src="img/logo.svg" hight="250" width="250" />
+              </a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+    </header>
+    <!--Cabeçalho Fim-->
+
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col">
+          <h3 class="display-4">Consulta de cidades</h3>
+        </div>
+      </div>
+
+      <!-- INICIO DO FORMULARIO -->
+      <form name="formuser">
+
+        <input type="hidden" id="field-id" value="" />
+
+        <div class="row mb-2">
+
+          <div class="col-md-3">
+            <input type="number" class="form-control" placeholder="IBGE" id="ibge" name="ibge" required />
+          </div>
+
+          <div class="col-md-3">
+            <select class="form-control" id="uf" name="uf" required>
+              <option value="">UF</option>
+              <option value="RO">RO</option>
+              <option value="AC">AC</option>
+              <option value="AM">AM</option>
+              <option value="RR">RR</option>
+              <option value="PA">PA</option>
+              <option value="AP">AP</option>
+              <option value="TO">TO</option>
+              <option value="MA">MA</option>
+              <option value="PI">PI</option>
+              <option value="CE">CE</option>
+              <option value="RN">RN</option>
+              <option value="PB">PB</option>
+              <option value="PE">PE</option>
+              <option value="AL">AL</option>
+              <option value="SE">SE</option>
+              <option value="BA">BA</option>
+              <option value="MG">MG</option>
+              <option value="ES">ES</option>
+              <option value="RJ">RJ</option>
+              <option value="SP">SP</option>
+              <option value="PR">PR</option>
+              <option value="SC">SC</option>
+              <option value="RS">RS</option>
+              <option value="MS">MS</option>
+              <option value="MT">MT</option>
+              <option value="GO">GO</option>
+              <option value="DF">DF</option>
+            </select>
+          </div>
+          
+          <div class="col-md-3">
+            <input type="text" class="form-control" onkeyup="somenteNumeros(this)" placeholder="Longitude" name="longitude" id="longitude" required />
+          </div>
+
+          <div class="col-md-3">
+            <input type="text" class="form-control" onkeyup="somenteNumeros(this)" placeholder="Latitude" name="latitude" id="latitude" required />
+          </div>
+
+        </div>
+
+        <div class="row mb-2">
+
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Cidade" onkeyup="somente_letras(this)" name="cidade" id="cidade" required />
+          </div>
+
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Região" onkeyup="somente_letras(this)" name="regiao" id="regiao" required />
+          </div>
+
+        </div>
+
+        <div class="col-md-12 mt-4 mb-4 d-flex justify-content-center">
+
+          <div>
+            <input type="submit" id="btn-update" class="btn btn-warning" onclick="return validar()" value="ATUALIZAR">
+            <input type="button" id="btn-deletar" class="btn btn-danger" onclick="return validar()" value="DELETAR">
+            <input type="submit" id="btn-salvar" class="btn btn-success" onclick="return validar()" value="GRAVAR"> 
+            <input type="button" id="btnExport" class="btn btn-dark" value="RELATÓRIO" />   
+          </div>
+
+        </div>
+
+    </form>
+
+    <!-- FIM DO FORMULARIO -->
+
+      <div class="mt-4 mb-4 d-flex">
+
+        <div class="col-md-4" >
+          <input type="text" class="form-control" onkeyup="filter_uf()"  id="filter_uf" placeholder="Procure por UF... ">
+        </div>
+
+        <div class="col-md-4">
+          <input type="text" class="form-control" onkeyup="filter_regiao()"  id="filter_regiao" placeholder="Procure por Região... ">
+        </div>
+
+        <div class="col-md-4">
+          <input type="text" class="form-control" onkeyup="filter_cidade()"  id="filter_cidade" placeholder="Procure Cidade... ">
+        </div>
+
+      </div>
+
+       <section class="row">
+        <div id="dvData" class="col">
+          <table class="table" id="table" >
+            <thead>
+              <tr>
+                <th>IBGE</th>
+                <th>UF</th>
+                <th>CIDADE</th>
+                <th>LATITUDE</th>
+                <th>LONGITUDE</th>
+                <th>REGIÃO</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tbody-register"></tbody>
+          </table>
+        </div>
+       </section>
+       
+    </div>
+  </body>	
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/filter.js"></script>
+    <script type="text/javascript" src="js/mask.js"></script>
+    <script type="text/javascript" src="js/disable.js"></script>
+    <script type="text/javascript" src="js/disable_button.js"></script>
+    <script type="text/javascript" src="js/export.js"></script>
+
+</html>
