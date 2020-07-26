@@ -13,3 +13,5 @@
 ### Aplicação irá abrir em branco, sendo que o usuario precisa preencher os dados 
 
 `Web SQL - SessionStorage `
+<br />
+<img src="https://ibb.co/fvt1vcM" />
