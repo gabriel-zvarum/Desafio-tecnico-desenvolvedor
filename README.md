@@ -1,6 +1,6 @@
 # Desafio-tecnico-desenvolvedor
 
-## 1. Passos para começar
+## Para começar
 
 ### Clonando o Repositório
 
@@ -10,6 +10,7 @@
 
 `Desafio-tecnico-desenvolvedor`
 
+## Detalhes da aplicação
 ### Aplicação irá abrir em branco, sendo que o usuario precisa preencher os dados 
 
 `Web SQL - SessionStorage `
