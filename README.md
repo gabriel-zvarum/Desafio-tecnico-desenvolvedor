@@ -13,7 +13,7 @@
 ### Aplicação irá abrir em branco, sendo que o usuario precisa preencher os dados 
 
 `Web SQL - SessionStorage `
-<br />
+<br /><br />
 <img src="https://i.ibb.co/sHQmHBj/storage.png" />
 
 ### Especificação linguagem
