@@ -15,3 +15,10 @@
 `Web SQL - SessionStorage `
 <br />
 <img src="https://i.ibb.co/sHQmHBj/storage.png" />
+
+### Especificação linguagem
+
+` HTML5 `
+` CSS - Bootstrap `
+` Javascript `
+` Jquery `
