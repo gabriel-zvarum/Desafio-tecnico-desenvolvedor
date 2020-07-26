@@ -16,9 +16,15 @@
 <br /><br />
 <img src="https://i.ibb.co/sHQmHBj/storage.png" />
 
-### Especificação linguagem
+### Especificação das linguagens
 
 ` HTML5 `
 ` CSS - Bootstrap `
 ` Javascript `
 ` Jquery `
+` Conceitos de SQL `
+
+### Especificação das funcionalidades
+
+` Validação em javascript `
+` Máscaras em javascript `
