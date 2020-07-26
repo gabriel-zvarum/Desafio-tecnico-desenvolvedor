@@ -9,3 +9,7 @@
 ### Entrar no diretorio 
 
 `Desafio-tecnico-desenvolvedor`
+
+### Aplicação irá abrir em branco, sendo que o usuario precisa preencher os dados 
+
+`Web SQL - SessionStorage `
