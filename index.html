@@ -105,14 +105,12 @@
         </div>
 
         <div class="col-md-12 mt-4 mb-4 d-flex justify-content-center">
-
           <div>
             <input type="submit" id="btn-update" class="btn btn-warning" onclick="return validar()" value="ATUALIZAR">
             <input type="button" id="btn-deletar" class="btn btn-danger" onclick="return validar()" value="DELETAR">
             <input type="submit" id="btn-salvar" class="btn btn-success" onclick="return validar()" value="GRAVAR"> 
             <input type="button" id="btnExport" class="btn btn-dark" value="RELATÓRIO" />   
           </div>
-
         </div>
 
     </form>
@@ -136,8 +134,8 @@
       </div>
 
        <section class="row">
-        <div id="dvData" class="col">
-          <table class="table" id="table" >
+        <div id="dvData" class="col-md-12">
+          <table class="table table-striped" id="table" >
             <thead>
               <tr>
                 <th>IBGE</th>
@@ -146,7 +144,6 @@
                 <th>LATITUDE</th>
                 <th>LONGITUDE</th>
                 <th>REGIÃO</th>
-                <th></th>
               </tr>
             </thead>
             <tbody id="tbody-register"></tbody>
@@ -155,8 +152,7 @@
        </section>
        
     </div>
-  </body>	
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -167,5 +163,5 @@
     <script type="text/javascript" src="js/disable.js"></script>
     <script type="text/javascript" src="js/disable_button.js"></script>
     <script type="text/javascript" src="js/export.js"></script>
-
+  </body>	
 </html>
