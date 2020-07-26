@@ -14,4 +14,4 @@
 
 `Web SQL - SessionStorage `
 <br />
-<img src="https://ibb.co/fvt1vcM" />
+<img src="https://i.ibb.co/sHQmHBj/storage.png" />
