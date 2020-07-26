@@ -1,3 +1,11 @@
 # Desafio-tecnico-desenvolvedor
 
-Aplicação web que permita realizar o CRUD de cidades, além de gerar alguns relatórios sobre estas informações.
+## 1. Passos para começar
+
+### Clonando o Repositório
+
+`git clone https://github.com/gabriel-zvarum/Desafio-tecnico-desenvolvedor.git`
+
+### Entrar no diretorio 
+
+`Desafio-tecnico-desenvolvedor`
